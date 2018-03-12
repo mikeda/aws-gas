@@ -15,19 +15,35 @@ AWS.services = {
     actions: [
       'DescribeRegions',
       'DescribeInstances',
-      'DescribeImages',
-      'RunInstances',
-      'CreateTags'
+      'DescribeImages'
     ],
-    apiVersion: '2015-04-15',
+    apiVersion: '2016-11-15',
     endpointPrefix: 'ec2'
+  },
+  ECS: {
+    actions: [
+    'DescribeClusters',
+    'DescribeContainerInstances',
+    'DescribeServices',
+    'DescribeTaskDefinition',
+    'DescribeTasks',
+    'ListAttributes',
+    'ListClusters',
+    'ListContainerInstances',
+    'ListServices',
+    'ListTaskDefinitionFamilies',
+    'ListTaskDefinitions',
+    'ListTasks'
+    ],
+    apiVersion: '2014-11-13',
+    endpointPrefix: 'ecs'
   },
   CloudWatch: {
     actions: [
       'DescribeAlarms',
       'GetMetricStatistics'
     ],
-    apiVersion: '2010-08-01',
+    apiVersion: '2015-10-07',
     endpointPrefix: 'monitoring'
   }
 };
