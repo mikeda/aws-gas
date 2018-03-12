@@ -1,6 +1,8 @@
 /*
  * create AWS signature v4
+ *
  * http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+ *
  */
 
 var AWSSign = function (config) {
