@@ -1,4 +1,4 @@
-aws-gas
+AWS-Google Apps Script
 ==================
 
 AWS client library for Google Apps Script
