@@ -1,7 +1,3 @@
-/*
- * basic AWS client library for Google Apps Script
- */
-
 var AWS = {
   _config: {},
   config: function(config) {
@@ -15,36 +11,64 @@ AWS.services = {
     actions: [
       'DescribeRegions',
       'DescribeInstances',
-      'DescribeImages'
+      'DescribeImages',
+      'DescribeAvailabilityZones',
+      'DescribeHosts',
+      'DescribeInstanceAttribute',
+      'DescribeTags'
     ],
     apiVersion: '2016-11-15',
     endpointPrefix: 'ec2'
   },
   ECS: {
     actions: [
-    'DescribeClusters',
-    'DescribeContainerInstances',
-    'DescribeServices',
-    'DescribeTaskDefinition',
-    'DescribeTasks',
-    'ListAttributes',
-    'ListClusters',
-    'ListContainerInstances',
-    'ListServices',
-    'ListTaskDefinitionFamilies',
-    'ListTaskDefinitions',
-    'ListTasks'
+      'DescribeClusters',
+      'DescribeContainerInstances',
+      'DescribeServices',
+      'DescribeTaskDefinition',
+      'DescribeTasks',
+      'ListAttributes',
+      'ListClusters',
+      'ListContainerInstances',
+      'ListServices',
+      'ListTaskDefinitionFamilies',
+      'ListTaskDefinitions',
+      'ListTasks'
     ],
     apiVersion: '2014-11-13',
     endpointPrefix: 'ecs'
   },
-  CloudWatch: {
+  RDS: {
     actions: [
-      'DescribeAlarms',
-      'GetMetricStatistics'
+      'DescribeAccountAttributes',
+      'DescribeDBClusters',
+      'DescribeDBInstances',
+      'DescribeDBParameterGroups',
+      'DescribeDBParameters',
+      'DescribeSourceRegions',
+      'ListTagsForResource'
     ],
-    apiVersion: '2015-10-07',
-    endpointPrefix: 'monitoring'
+    apiVersion: '2014-10-31',
+    endpointPrefix: 'ec2'
+  },
+  CostExplorer: {
+    actions: [
+      'GetCostAndUsage',
+      'GetDimensionValues',
+      'GetReservationCoverage',
+      'GetReservationPurchaseRecommendation'
+    ],
+    apiVersion: '2017-10-25',
+    endpointPrefix: 'costexplorer'
+  },
+  Pricing: {
+    actions: [
+      'DescribeServices',
+      'GetAttributeValues',
+      'GetProducts'
+    ],
+    apiVersion: '2017-10-15',
+    endpointPrefix: 'pricing'
   }
 };
 
