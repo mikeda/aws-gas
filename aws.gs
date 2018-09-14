@@ -1,7 +1,3 @@
-/*
- * basic AWS client library for Google Apps Script
- */
-
 var AWS = {
   _config: {},
   config: function(config) {
@@ -16,19 +12,63 @@ AWS.services = {
       'DescribeRegions',
       'DescribeInstances',
       'DescribeImages',
-      'RunInstances',
-      'CreateTags'
+      'DescribeAvailabilityZones',
+      'DescribeHosts',
+      'DescribeInstanceAttribute',
+      'DescribeTags'
     ],
-    apiVersion: '2015-04-15',
+    apiVersion: '2016-11-15',
     endpointPrefix: 'ec2'
   },
-  CloudWatch: {
+  ECS: {
     actions: [
-      'DescribeAlarms',
-      'GetMetricStatistics'
+      'DescribeClusters',
+      'DescribeContainerInstances',
+      'DescribeServices',
+      'DescribeTaskDefinition',
+      'DescribeTasks',
+      'ListAttributes',
+      'ListClusters',
+      'ListContainerInstances',
+      'ListServices',
+      'ListTaskDefinitionFamilies',
+      'ListTaskDefinitions',
+      'ListTasks'
     ],
-    apiVersion: '2010-08-01',
-    endpointPrefix: 'monitoring'
+    apiVersion: '2014-11-13',
+    endpointPrefix: 'ecs'
+  },
+  RDS: {
+    actions: [
+      'DescribeAccountAttributes',
+      'DescribeDBClusters',
+      'DescribeDBInstances',
+      'DescribeDBParameterGroups',
+      'DescribeDBParameters',
+      'DescribeSourceRegions',
+      'ListTagsForResource'
+    ],
+    apiVersion: '2014-10-31',
+    endpointPrefix: 'ec2'
+  },
+  CostExplorer: {
+    actions: [
+      'GetCostAndUsage',
+      'GetDimensionValues',
+      'GetReservationCoverage',
+      'GetReservationPurchaseRecommendation'
+    ],
+    apiVersion: '2017-10-25',
+    endpointPrefix: 'costexplorer'
+  },
+  Pricing: {
+    actions: [
+      'DescribeServices',
+      'GetAttributeValues',
+      'GetProducts'
+    ],
+    apiVersion: '2017-10-15',
+    endpointPrefix: 'pricing'
   }
 };
 
